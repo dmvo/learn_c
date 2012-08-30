@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int main(){
-
+int main()
+{
 	int c;
 
-	printf("type characters, EOF quits \n");
+	printf("type characters, EOF quits\n");
 
-	while (c){
+	while (c) {
 		c = getchar() != EOF;
 		printf("%i\n", c); /* if 0 == EOF, if 1 != EOF */
 	}
