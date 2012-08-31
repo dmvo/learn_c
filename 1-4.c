@@ -12,7 +12,7 @@ int main()
 	celsius = lower;
 	printf("Celsius Fahrenheit\n");
 
-	while (celsius <= upper){
+	while (celsius <= upper) {
 		fahr =  celsius * 1.8 + 32.0;
 		printf("%3.0f %10.1f\n", celsius, fahr);
 		celsius = celsius + step;
