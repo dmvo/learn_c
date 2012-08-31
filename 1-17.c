@@ -10,7 +10,7 @@ int main()
 	char line[MAXLINE];
 
 	while ((len = getline1(line, MAXLINE)) > 0)
-		if (len > 80)
+		if (len > LIMIT)
 			printf("%s", line);
 	return 0;
 }
