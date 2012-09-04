@@ -49,5 +49,6 @@ void filter(char s[], int len)
 	} else {
 		s[i+1] = '\0';
 	}
-
+	if (s[0] == '\n')
+		s[0] = '\0';
 }
