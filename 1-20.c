@@ -9,11 +9,10 @@ int main()
 	while ((c = getchar()) != EOF) {
 		if (c == '\t') {
 			i = TABSIZE - (j % TABSIZE);
-			j = 0;
-			while  (j < i) {
+
+			for (j = 0; j < i; j++)
 				putchar(' ');
-				j++;
-			}
+
 			j = 0;
 		} else if (c == '\n') {
 			putchar(c);
@@ -22,7 +21,6 @@ int main()
 			putchar(c);
 			j++;
 		}
-
 	}
 	return 0;
 }
