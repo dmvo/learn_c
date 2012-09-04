@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdio.h>
 #define MAXLINE 1000
 
@@ -32,8 +33,21 @@ int getline1(char s[], int lim)
 
 void filter(char s[], int len)
 {
-	while ((s[len-2] == ' ' || s[len-2] == '\t') && len > 0)
-		--len;
-	s[len-1] = '\n';
-	s[len] = '\0';
+	int i;
+	bool flag = false;
+
+	if (s[len-1] == '\n') {
+		flag = true;
+		len--;
+	}
+
+	for (i = len-1; (i >= 0) && (s[i] == ' ' || s[i] == '\t'); i--)
+		;
+	if (flag) {
+		s[i+1] = '\n';
+		s[i+2] = '\0';
+	} else {
+		s[i+1] = '\0';
+	}
+
 }
