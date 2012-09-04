@@ -41,7 +41,6 @@ void copy(char to[], char from[])
 {
 	int i;
 
-	i = 0;
-	while ((to[i] = from[i]) != '\0')
-		++i;
+	for (i = 0; (to[i] = from[i]); i++)
+		;
 }
