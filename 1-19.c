@@ -32,16 +32,15 @@ int getline1(char s[], int lim)
 
 void reverse(char s[])
 {
-	char tmp[MAXLINE];
+	char tmp;
 	int i,j;
 
-	i = 0;
-	while (s[i] != '\n')
-		i++;
-	j = i - 1;
-	for (i = 0; i <= j; i++)
-		tmp[i] = s[j-i];
+	for (i = 0; s[i]; i++)
+		;
 
-	for (i = 0; i <= j; i++)
-		s[i] = tmp[i];
+	for (j = 0; j < i/2; j++) {
+		tmp = s[j];
+		s[j] = s[i-j-1];
+		s[i-j-1] = tmp;
+	}
 }
