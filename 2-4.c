@@ -6,7 +6,7 @@ void squeeze(char s[], char c[]);
 int main()
 {
 	char s[7] = { 'q', 'w', 'e', 'r', 't', 'y' };
-	char c[4] = { 'a', 'q', 'f', 'y' };
+	char c[5] = { 'a', 'q', 'f', 'y' };
 
 	printf("%s\n", s);
 	squeeze(s,c);
