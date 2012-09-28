@@ -1,4 +1,4 @@
-CFLAGS = -Wall -lm
+CFLAGS = -Wall -lm -g
 
 OBJECTS = 1-1 \
 	1-2 \
@@ -52,7 +52,10 @@ OBJECTS = 1-1 \
 	4-11 \
 	4-12 \
 	4-13 \
-	4-14
+	4-14 \
+	5-1 \
+	5-2 \
+	5-3
 		
 all: $(OBJECTS)
 
